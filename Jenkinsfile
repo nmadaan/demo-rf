@@ -16,7 +16,7 @@ pipeline {
 						echo #######################################
 						echo # Running tests first time #
 						echo #######################################
-						cmd /c pabot --processes 1 --outputdir reports --output output.xml  -v PLATFORM:"" -v REMOTE_URL:"" %WORKSPACE%\\tests.robot %*
+						cmd /c robot --processes 1 --outputdir reports --output output.xml  -v PLATFORM:"" -v REMOTE_URL:"" %WORKSPACE%\\tests.robot %*
 						'''
 					}
 
