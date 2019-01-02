@@ -16,7 +16,7 @@ pipeline {
 						echo #######################################
 						echo # Running tests first time #
 						echo #######################################
-						cmd /c robot "%WORKSPACE%\\test.robot"
+						cmd /c robot --outputdir reports "%WORKSPACE%\\test.robot"
 						'''
 					}
 
@@ -25,6 +25,7 @@ pipeline {
 			always {
 			 step([
 						  $class: 'RobotPublisher',
+				 		  outputPath: 'reports',
 						  outputFileName: 'output.xml',
 						  reportFileName: 'report.html',
 						  logFileName: 'log.html',
