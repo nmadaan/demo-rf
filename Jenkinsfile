@@ -25,7 +25,6 @@ pipeline {
 			always {
 			 step([
 						  $class: 'RobotPublisher',
-						  outputPath: 'reports',
 						  outputFileName: 'output.xml',
 						  reportFileName: 'report.html',
 						  logFileName: 'log.html',
