@@ -16,7 +16,7 @@ pipeline {
 						echo #######################################
 						echo # Running tests first time #
 						echo #######################################
-						cmd /c robot %WORKSPACE%\\tests.robot %*
+						cmd /c robot %WORKSPACE%\\tests.robot
 						'''
 					}
 
